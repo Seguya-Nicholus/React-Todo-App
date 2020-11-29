@@ -19,15 +19,20 @@ const Todos = (props) => (
               <input type="checkbox" />
             </td>
             <td>
-              <button className="btn btn-success">Edit</button>{" "}
-              <button className="btn btn-danger">Delete</button>
+              <button onClick={()=>props.editRow(todo)} className="btn btn-success">Edit</button>{" "}
+              <button
+                className="btn btn-danger"
+                onClick={() => props.deleteTodo(todo.id)}
+              >
+                Delete
+              </button>
             </td>
           </tr>
         ))
       ) : (
         <tr>
           <td></td>
-          <td colSpan={2}>No todos</td>
+          <td>No todos</td>
         </tr>
       )}
     </tbody>
