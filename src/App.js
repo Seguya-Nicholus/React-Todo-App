@@ -8,54 +8,29 @@ import "./App.css";
 
 const App = () => {
   const todosData = [
-        {
-          id: 1,
-          title: "Take out the Trash",
-          completed: false,
-        },
-        {
-          id: 2,
-          title: "Have dinner with my wife",
-          completed: true,
-        },
-        {
-          id: 3,
-          title: "Take children to school",
-          completed: false,
-        },
-        {
-          id: 4,
-          title: "Go Swimming with Family",
-          completed: false,
-        },
+    {
+      id: 1,
+      title: "Take out the Trash",
+      completed: false,
+    },
+    {
+      id: 2,
+      title: "Have dinner with my wife",
+      completed: true,
+    },
+    {
+      id: 3,
+      title: "Take children to school",
+      completed: false,
+    },
+    {
+      id: 4,
+      title: "Go Swimming with Family",
+      completed: false,
+    },
   ];
 
-const [todos, setTodos] = useState(todosData);
-
-  // const state = {
-  //   todos: [
-  //     {
-  //       id: 1,
-  //       title: "Take out the Trash",
-  //       completed: false,
-  //     },
-  //     {
-  //       id: 2,
-  //       title: "Have dinner with my wife",
-  //       completed: true,
-  //     },
-  //     {
-  //       id: 3,
-  //       title: "Take children to school",
-  //       completed: false,
-  //     },
-  //     {
-  //       id: 4,
-  //       title: "Go Swimming with Family",
-  //       completed: false,
-  //     },
-  //   ],
-  // };
+  const [todos, setTodos] = useState(todosData);
 
   return (
     <div>
@@ -73,7 +48,7 @@ const [todos, setTodos] = useState(todosData);
           <div className="flex-large flex-fill">
             <br />
             <h3 className="text-primary">Todos List</h3>
-            <Todos />
+            <Todos todos={todos} />
           </div>
         </div>
       </div>
